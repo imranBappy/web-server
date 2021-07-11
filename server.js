@@ -54,7 +54,8 @@ app.use((error, req, res, next)=>{
 
 
 const port = process.env.PORT || 4000
-const mongoURI = process.env.MONGODB_URI || `mongodb://localhost:27017/bdGames`;
+// const mongoURI = process.env.MONGODB_URI || `mongodb://localhost:27017/bdGames`;
+const mongoURI = "mongodb+srv://wins65:s0jjrKUr4yyeH6xn@cluster0.n9sfu.mongodb.net/bdGame?retryWrites=true&w=majority"
 
 app.listen(port,()=>{
     mongoose.connect(mongoURI,{useNewUrlParser:true, useUnifiedTopology:true}, ()=>{
